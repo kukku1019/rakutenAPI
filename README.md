@@ -1,5 +1,11 @@
 # rakutenAPIデータ取得準備
 
+#pyenv install  
+brew install pyenv  
+
+#python3.6 install  
+pyenv install python3.6.0  
+
 #mysqlインストール  
 brew install mysql  
 
