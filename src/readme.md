@@ -1,0 +1,1 @@
+モジュールget_rakuten_infoのapi_id定数にapplicationIdを設定してください。  
