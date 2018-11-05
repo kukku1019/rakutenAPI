@@ -32,7 +32,7 @@ class Genrel_info():
 
 
 class Rank_info():
-    def __init__(self,api_id = "",\
+    def __init__(self,api_id = "#####",\
                  api_url = "https://app.rakuten.co.jp/services/api/IchibaItem/Ranking/20170628",
                  header={"Content-Type": "application/json"}):
 
