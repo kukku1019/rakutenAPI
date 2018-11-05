@@ -1,7 +1,7 @@
 # /usr/bin/env python
 # -*- coding: utf-8 -*-
-from mysql_dao import Dao
-from get_rakuten_info import Genrel_info, Rank_info
+from src.mysql_dao import Dao
+from src.get_rakuten_info  import Genrel_info, Rank_info
 import logging
 import time
 

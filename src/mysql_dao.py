@@ -9,7 +9,7 @@ logging.basicConfig(filename="debug.log", filemode='a', level=logging.DEBUG, \
 
 class Dao():
     #DBオブジェ作成
-    def __init__(self,host='localhost',port=3306,user='root',password='root',database='test'\
+    def __init__(self,host='localhost',port=3306,user='test',password='test',database='test'\
                  ,auth_plugin='mysql_native_password'):
         try:
             self.conn = mysql.connector.connect(
@@ -76,9 +76,9 @@ class Dao():
     #     except:
     #         logger.debug(str(genre_id)+"SQL_genre1 failed")
 
-# sql=Dao()
-# sql.execute("INSERT INTO smartshopping.genre1 (genre_id,genre_name) VALUES (564500,'スマートフォン・タブレット')")
-# sql.execute("show databases;")
+sql=Dao()
+sql.execute("INSERT INTO test.genre1 (genre_id,genre_name) VALUES (564500,'スマートフォン・タブレット')")
+sql.execute("show databases;")
 
-# Dao().execute("INSERT INTO smartshopping.genre1 (genre_id,genre_name) VALUES (564500,'スマートフォン・タブレット');")
+Dao().execute("INSERT INTO test.genre1 (genre_id,genre_name) VALUES (564500,'スマートフォン・タブレット');")
 
