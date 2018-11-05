@@ -1,16 +1,16 @@
 # /usr/bin/env python
 # -*- coding: utf-8 -*-
-from mysql_dao import Dao
-from get_rakuten_info import Genrel_info, Rank_info
+from src.mysql_dao import Dao
+from src.get_rakuten_info import Genrel_info, Rank_info
 import logging
 import time
 
 # loggerの設定
 logger = logging.getLogger("log")
-logging.basicConfig(filename="debug.log", filemode='a', level=logging.DEBUG, \
+logging.basicConfig(filename="debug.log", filemode='a', level=logging.INFO, \
                     format='%(asctime)s:%(levelname)s:%(message)s')
 sql = Dao()
-test=open("./categorytree/category.md","a",encoding="utf-8")
+test=open("./category.md","a",encoding="utf-8")
 
 # 親ジャンル取得
 def genre_insert(noname_lis=[]):
@@ -30,14 +30,13 @@ def genre_insert(noname_lis=[]):
         for x in noname_lis[2]:
             #受け取ったリスト　階層を確認、４階層以下であれば処理続行
             if x[3] < 4 :
-                print(noname_lis)
-
                 #カテゴリーの作成
                 test.write("    " * (x[3] - 1) + "* " + x[1] + "\n")
                 #DBジャンルテーブルへのインサート
                 sql.insert_tabl_genre1(genre_id=x[0],genre_name=x[1])
                 #rank情報インサート
                 rank_insert(genre_id=x[0])
+                print(x)
 
                 if x[3]<3:
                     genrel_dict = Genrel_info().get_genrel(x[0])
@@ -59,10 +58,6 @@ def rank_insert(genre_id):
     if 'error' in rank_info:
         return
     print(rank_info)
-    print("#1"+ str(rank_info["Items"]))
-    print("#2"+ str(rank_info["title"]))
-    print("#3"+ str(rank_info["lastBuildDate"]))
-
     for x in rank_info["Items"]:
         name=x["Item"]["itemName"]
         rank=x["Item"]["rank"]

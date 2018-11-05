@@ -10,7 +10,7 @@ logging.basicConfig(filename="debug.log", filemode='a', level=logging.DEBUG, \
 
 
 class Genrel_info():
-    def __init__(self, api_id="##########", \
+    def __init__(self, api_id="xxxxxx", \
                  api_url="https://app.rakuten.co.jp/services/api/IchibaGenre/Search/20140222", \
                  header={"Content-Type": "application/json"}):
 
@@ -32,7 +32,7 @@ class Genrel_info():
 
 
 class Rank_info():
-    def __init__(self,api_id = "#########",\
+    def __init__(self,api_id = "xxxxx",\
                  api_url = "https://app.rakuten.co.jp/services/api/IchibaItem/Ranking/20170628",
                  header={"Content-Type": "application/json"}):
 
@@ -49,8 +49,3 @@ class Rank_info():
             logger.warning(str(genrel_id) + "rank_serch request failed")
 
         return resp.json()
-
-
-
-# test = Rank_info().get_rank(101240)
-# print(test)
