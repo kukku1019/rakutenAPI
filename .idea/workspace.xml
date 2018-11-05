@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d100c5cc-049b-423a-89a1-895c70472aea" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/category.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/debug.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/get_rakuten_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/get_rakuten_info.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mysql_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/mysql_dao.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/start.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,8 +17,11 @@
       <file leaf-file-name="get_rakuten_info.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/get_rakuten_info.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="119">
+              <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
+              <folding>
+                <element signature="e#46#61#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -31,8 +29,11 @@
       <file leaf-file-name="start.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/start.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="9" column="74" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="74" />
+            <state relative-caret-position="701">
+              <caret line="51" column="22" lean-forward="true" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+              <folding>
+                <element signature="e#46#72#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -262,7 +263,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -270,6 +271,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="34" column="51" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+          <folding>
+            <element signature="e#46#61#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -298,6 +302,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+          <folding>
+            <element signature="e#46#72#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -372,6 +379,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/categorytree/category.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-57143" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/mysql_dao.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -384,23 +399,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/start.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="74" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/categorytree/category.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-57143" />
-          <second_editor />
+        <state relative-caret-position="701">
+          <caret line="51" column="22" lean-forward="true" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+          <folding>
+            <element signature="e#46#72#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/get_rakuten_info.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="119">
+          <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
+          <folding>
+            <element signature="e#46#61#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

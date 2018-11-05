@@ -1,7 +1,7 @@
 # /usr/bin/env python
 # -*- coding: utf-8 -*-
-from src.mysql_dao import Dao
-from src.get_rakuten_info import Genrel_info, Rank_info
+import get_rakuten_info
+import mysql_dao
 import logging
 import time
 
@@ -9,13 +9,13 @@ import time
 logger = logging.getLogger("log")
 logging.basicConfig(filename="debug.log", filemode='a', level=logging.INFO, \
                     format='%(asctime)s:%(levelname)s:%(message)s')
-sql = Dao()
+sql = mysql_dao.Dao()
 test=open("./category.md","a",encoding="utf-8")
 
 # 親ジャンル取得
 def genre_insert(noname_lis=[]):
     if noname_lis == []:
-        genrel_dict = Genrel_info().get_genrel(0)
+        genrel_dict = get_rakuten_info.Genrel_info().get_genrel(0)
         first_list = [0, "category", [],0]
         for x in genrel_dict["children"]:
             id = x["child"]["genreId"]
@@ -39,7 +39,7 @@ def genre_insert(noname_lis=[]):
                 print(x)
 
                 if x[3]<3:
-                    genrel_dict = Genrel_info().get_genrel(x[0])
+                    genrel_dict = get_rakuten_info.Genrel_info().get_genrel(x[0])
                     for y in genrel_dict["children"]:
                         id =y["child"]["genreId"]
                         name = y["child"]["genreName"]
@@ -53,7 +53,7 @@ def genre_insert(noname_lis=[]):
 
 def rank_insert(genre_id):
     # ランク取得
-    rank_info=Rank_info().get_rank(genrel_id=genre_id)
+    rank_info=get_rakuten_info.Rank_info().get_rank(genrel_id=genre_id)
     time.sleep(0.5)
     if 'error' in rank_info:
         return
