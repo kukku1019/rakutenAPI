@@ -9,7 +9,7 @@ pyenv install python3.6.0
 #mysqlインストール  
 brew install mysql  
 
---------------------sql--------------------
+--------------------sql--------------------  
 #port確認  
 show variables like ‘port’  
 
@@ -29,7 +29,7 @@ create database test;
 #テーブル作成  
 create table test.genre1 (genre_id int NOT NULL PRIMARY KEY,genre_name varchar(255));  
 create table test.rank2 (item_id int AUTO_INCREMENT NOT NULL PRIMARY KEY,item_name varchar(255),rank_num int , genre_id int,foreign key (genre_id) references genre1(genre_id));  
---------------------sql--------------------
+--------------------sql--------------------  
 
 #python用mysqlパッケージインストール   
 pip install mysql-connector-python-rf  
