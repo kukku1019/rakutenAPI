@@ -24,6 +24,7 @@ test=open("./category.md","a",encoding="utf-8")
 
 # 親ジャンル取得
 def genre_insert(noname_lis=[]):
+    #初回のルートジャンルリクエスト場合
     if noname_lis == []:
         genrel_dict = get_rakuten_info.Genrel_info(api_id=api_id,api_url=api_url).get_genrel(0)
         first_list = [0, "category", [],0]
@@ -36,6 +37,7 @@ def genre_insert(noname_lis=[]):
         genre_insert(first_list)
 
     else:
+        #２回目以後の処理
         #受け取ったリスト引き数の２番のリストを繰り返し処理
         for x in noname_lis[2]:
             #受け取ったリスト　階層を確認、４階層以下であれば処理続行
@@ -47,7 +49,7 @@ def genre_insert(noname_lis=[]):
                 #rank情報インサート
                 rank_insert(genre_id=x[0])
                 print(x)
-
+                #階層が３階層到達した場合、４階層に対してデータ取得しないように制御
                 if x[3]<3:
                     genrel_dict = get_rakuten_info.Genrel_info(api_id=api_id,api_url=api_url).get_genrel(x[0])
                     for y in genrel_dict["children"]:
