@@ -13,12 +13,6 @@ api_url="https://app.rakuten.co.jp/services/api/IchibaGenre/Search/20140222"
 #ランキングサーチAPIURL
 api_rank_url = "https://app.rakuten.co.jp/services/api/IchibaItem/Ranking/20170628"
 
-
-#ログ設定
-# loggerの設定
-logger = logging.getLogger("log")
-logging.basicConfig(filename="debug.log", filemode='a', level=logging.INFO, \
-                    format='%(asctime)s:%(levelname)s:%(message)s')
 sql = mysql_dao.Dao()
 test=open("./category.md","a",encoding="utf-8")
 
