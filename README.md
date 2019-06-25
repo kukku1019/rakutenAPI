@@ -1,4 +1,4 @@
-# rakutenAPIデータ取得準備
+# 楽天カテゴリデータ取得準備
 
 #pyenv install  
 brew install pyenv  
